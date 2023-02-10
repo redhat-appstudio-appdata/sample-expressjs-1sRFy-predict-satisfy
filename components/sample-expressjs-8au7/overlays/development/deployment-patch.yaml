@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: sample-expressjs-8au7
+  namespace: bbrownin-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:a2d4de2e45b18923976c36653131d2e7590a7be55bfb32084cc1a2829d49bdc9
+        name: container-image
+        resources: {}
+status: {}
