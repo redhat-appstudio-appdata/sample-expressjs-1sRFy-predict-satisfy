@@ -1,0 +1,15 @@
+apiVersion: pipelinesascode.tekton.dev/v1alpha1
+kind: Repository
+metadata:
+  annotations:
+    appstudio.openshift.io/application: sample-expressjs
+    appstudio.openshift.io/component: sample-expressjs-8au7
+    build.appstudio.openshift.io/build: "true"
+    build.appstudio.openshift.io/type: build
+    build.appstudio.openshift.io/version: "0.1"
+    pipelines.appstudio.openshift.io/type: build
+  creationTimestamp: null
+  name: sample-expressjs-8au7
+  namespace: bbrownin-tenant
+spec:
+  url: https://github.com/digitalocean/sample-expressjs
