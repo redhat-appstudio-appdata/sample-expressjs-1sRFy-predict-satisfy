@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: sample-expressjs-8au7
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:bbrownin-tenant-sample-expressjs-8au7
+      - image: quay.io/redhat-appstudio/user-workload@sha256:a2d4de2e45b18923976c36653131d2e7590a7be55bfb32084cc1a2829d49bdc9
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -40,6 +40,9 @@ spec:
           tcpSocket:
             port: 3001
         resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
           requests:
             cpu: 10m
             memory: 50Mi
